@@ -17,5 +17,5 @@ jobs:
         env:
           CB_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
         run: |
-          # Push all branches and tags to Codeberg forcefully to keep them mirrored
-          git push --prune --force https://${{ github.repository_owner }}:${CB_TOKEN}@codeberg.org/${{ github.repository_owner }}/${{ github.event.repository.name }}.git refs/remotes/origin/*:refs/heads/* +refs/tags/*:refs/tags/*
+          # Pushing directly to your specific NickAtLinux Codeberg repository
+          git push --prune --force https://NickAtLinux:${CB_TOKEN}@codeberg.org/NickAtLinux/Narnia-Server-Client-Modpack-mirror.git refs/remotes/origin/*:refs/heads/* +refs/tags/*:refs/tags/*
